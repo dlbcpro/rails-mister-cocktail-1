@@ -1,0 +1,22 @@
+<div class="home-banner">
+  <h1>Mister Cocktails</h1>
+  <p>
+    <span id="banner-typed-text"></span>
+  </p>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <ul>
+        <% @cocktails.each do |cocktail| %>
+          <li><%= cocktail.name %></li>
+          <%= link_to 'View more', cocktail_path(cocktail) %>
+        <% end %>
+      </ul>
+      <%= link_to 'Create new cocktail', new_cocktail_path %>
+    </div>
+  </div>
+</div>
+
+
+
